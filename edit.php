@@ -43,12 +43,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (empty($errors)) {
             $image_name = time() . '_' . $_FILES['img']['name'];
             $image_tmp = $_FILES['img']['tmp_name'];
-            $image_path = "../assets/img/" . $image_name;
+            $image_path = "./assets/img/" . $image_name;
             move_uploaded_file($image_tmp, $image_path);
 
             
-            if (!empty($student['img']) && file_exists("../assets/img/" . $student['img'])) {
-                unlink("../assets/img/" . $student['img']);
+            if (!empty($student['img']) && file_exists("./assets/img/" . $student['img'])) {
+                unlink("./assets/img/" . $student['img']);
             }
         }
     }
@@ -114,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <?php if (!empty($student['img'])): ?>
                     <div class="mb-3">
                         <label for="currentImg" class="form-label">Current Image</label><br>
-                        <img src="../assets/img/<?= htmlspecialchars($student['img']); ?>" alt="Student Image" style="width: 150px; height: auto;"><br><br>
+                        <img src="./assets/img/<?= htmlspecialchars($student['img']); ?>" alt="Student Image" style="width: 150px; height: auto;"><br><br>
                     </div>
                 <?php endif; ?>
 
