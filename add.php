@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $age = $_POST['age'];
 
         if (isset($_FILES['img']) && $_FILES['img']['error'] == 0) {
-            $target_dir = "../assets/img/"; 
+            $target_dir = "./assets/img/"; 
             $img = time() . '_' . basename($_FILES['img']['name']); 
             $target_file = $target_dir . $img;
 
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $stmt = $pdo->prepare($query);
                 $stmt->execute([$first_name, $last_name, $email, $age, $img]);
 
-                echo "<p class='alert alert-success'>Student added successfully!</p>";
+                echo "<p style='margin-top:50px;margin-left:200px;' class='alert alert-success'>Student added successfully!</p>";
             } else {
                 echo "<p class='alert alert-danger'>Error uploading image.</p>";
             }

@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt = $pdo->prepare($query);
         $stmt->execute([$first_name, $last_name, $email, $age, $image_name, $id]);
 
-        header("Location: ../index.php");
+        header("Location: ./index.php");
         exit;
     }
 }
