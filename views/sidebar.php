@@ -18,14 +18,25 @@
 
 
         <ul class="nav flex-column">
+        <?php 
+
+    $current_url = $_SERVER['REQUEST_URI'];
+
+   
+    if (strpos($current_url, '/views/') !== false) {
+        $dashboard_link = '../index.php';
+    } else {
+        $dashboard_link = 'index.php';      
+    }
+?>
             <li class="nav-item">
-                <a class="nav-link active  text-dark" aria-current="page" href="/php/student-management-system"><i class="fas fa-tachometer-alt me-2"></i> Dashboard</a>
+                <a class="nav-link active  text-dark" aria-current="page" href="<?php echo $dashboard_link ?>"><i class="fas fa-tachometer-alt me-2"></i> Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link  text-dark" href="/php/student-management-system"> <i class="fa fa-user me-2"></i>Manage Students</a>
+                <a class="nav-link  text-dark" href="<?php echo $dashboard_link ?>"> <i class="fa fa-user me-2"></i>Manage Students</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link  text-dark" href="/php/student-management-system/views/add.php"><i class="fas fa-user-plus me-2"></i> Add Students</a>
+                <a class="nav-link  text-dark" href="views/add.php"><i class="fas fa-user-plus me-2"></i> Add Students</a>
             </li>
 
         </ul>
