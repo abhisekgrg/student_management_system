@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $errors[] = 'A valid email is required.';
     }
 
-    if (empty($_POST['age']) || !filter_var($_POST['age'], FILTER_VALIDATE_INT) || $_POST['age'] <= 0 || $_POST['age'] > 50) {
+    if (empty($_POST['age']) || !filter_var($_POST['age'], FILTER_VALIDATE_INT) || $_POST['age'] <= 5 || $_POST['age'] > 50) {
         $errors[] = 'A valid age between 1 and 50 is required.';
     }
 
