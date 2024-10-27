@@ -14,7 +14,7 @@
 <body>
     <?php
     require 'includes/db.php';
-    include 'views/sidebar.php';
+    include 'sidebar.php';
 
     
     $query = "SELECT * FROM students";
@@ -59,12 +59,12 @@
                                 <p>No image available</p>
                                 <?php endif; ?>
                             </td>
-                            <td class="action-buttons">
-                                <a href="views/view.php?id=<?php echo $student['id']; ?>">
+                            <td class="action-button">
+                                <a href="view.php?id=<?php echo $student['id']; ?>">
 
                                     <button class="btn btn-success">View</button>
                                 </a>
-                                <a href="views/edit.php?id=<?php echo $student['id']; ?>">
+                                <a href="edit.php?id=<?php echo $student['id']; ?>">
 
                                     <button class="btn btn-primary">Edit</button>
                                 </a>

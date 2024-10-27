@@ -1,6 +1,6 @@
 <?php
-include '../includes/db.php';
-include './sidebar.php';
+include './includes/db.php';
+include 'sidebar.php';
 
 $errors = [];
 
@@ -70,8 +70,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Add Student</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/utility.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/utility.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
