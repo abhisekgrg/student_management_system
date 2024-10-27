@@ -59,7 +59,7 @@
                                 <p>No image available</p>
                                 <?php endif; ?>
                             </td>
-                            <td class="action-button">
+                            <td class="action-buttons">
                                 <a href="view.php?id=<?php echo $student['id']; ?>">
 
                                     <button class="btn btn-success">View</button>
