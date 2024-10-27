@@ -52,12 +52,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 echo "<p style='margin-top:50px;margin-left:200px;' class='alert alert-success'>Student added successfully!</p>";
             } else {
-                echo "<p class='alert alert-danger'>Error uploading image.</p>";
+                echo "<p style='margin-top:50px;margin-left:200px; class='alert alert-danger'>Error uploading image.</p>";
             }
         }
     } else {
         foreach ($errors as $error) {
-            echo "<p class='alert alert-danger'>$error</p>";
+            echo "<p style='margin-top:50px;margin-left:200px; class='alert alert-danger'>$error</p>";
         }
     }
 }

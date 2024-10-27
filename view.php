@@ -40,7 +40,7 @@ $student = $stmt->fetch();
             <?php if (!empty($student['img'])): ?>
                 <div class="mb-3">
 
-                    <img src="../assets/img/<?= htmlspecialchars($student['img']); ?>" alt="Student Image"
+                    <img src="./assets/img/<?= htmlspecialchars($student['img']); ?>" alt="Student Image"
                         style="width: 150px; height: 200px; object-fit:cover;"><br><br>
                 </div>
                 <?php endif; ?>
